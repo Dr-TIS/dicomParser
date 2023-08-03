@@ -1,4 +1,4 @@
-/*! dicom-parser - 1.8.12 - 2023-04-25 | (c) 2017 Chris Hafey | https://github.com/cornerstonejs/dicomParser */
+/*! dicom-parser - 1.8.12 - 2023-08-03 | (c) 2017 Chris Hafey | https://github.com/cornerstonejs/dicomParser */
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory(require("zlib"));
@@ -74,7 +74,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "ff20f28d854146b816f7";
+/******/ 	var hotCurrentHash = "b80da78ec746330c7820";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -3404,6 +3404,7 @@ function sharedCopy(byteArray, byteOffset, length) {
   if (typeof Buffer !== 'undefined' && byteArray instanceof Buffer) {
     return byteArray.slice(byteOffset, byteOffset + length);
   } else if (byteArray instanceof Uint8Array) {
+    // Antonio Diaz Tula
     return new Uint8Array(byteArray.buffer.slice(byteArray.byteOffset + byteOffset, byteArray.byteOffset + byteOffset + length)); // return new Uint8Array(byteArray.buffer, byteArray.byteOffset + byteOffset, length);
   }
 
