@@ -16,7 +16,8 @@ export default function sharedCopy (byteArray, byteOffset, length) {
   if (typeof Buffer !== 'undefined' && byteArray instanceof Buffer) {
     return byteArray.slice(byteOffset, byteOffset + length);
   } else if (byteArray instanceof Uint8Array) {
-    // Antonio Diaz Tula
+    console.log('Antonio Diaz Tula');
+
     return new Uint8Array(
       byteArray.buffer.slice(byteArray.byteOffset + byteOffset, byteArray.byteOffset + byteOffset + length)
     );
